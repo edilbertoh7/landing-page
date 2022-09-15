@@ -1,14 +1,30 @@
-import twiter from "../assets/img/Twitter.webp";
-import wapp1 from "../assets/img/wapp1.webp";
-import face from "../assets/img/face.png";
-import instagram from "../assets/img/instagram.webp";
+
 import { UseModal } from "../modal/UseModal";
 import ModalForm from "../modal/ModalForm";
 import ContactForm from "./formularios/ContactForm";
+import { useState, useEffect } from "react";
+import landingApi from "../api/LandingApi";
 
 const FooterPage = () => {
-    const twitterevent = () => {
-        alert("twitter")
+    const [getLanding, setGetLandig] = useState([])
+    console.log(getLanding);
+
+    useEffect(() => {
+        obtenerPortafolio()
+    }, [])
+
+    const obtenerPortafolio = async () => {
+
+        try {
+            const respuesta = await landingApi.get('/landing');
+            setGetLandig(respuesta.data[0].redes)
+            //console.log(respuesta.data[0].portafolio);
+            getLanding.map((landing) => {
+                //console.log(landing.backend[0].lenguaje);
+            })
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     const [isOpenm, openModalm, closeModalm] = UseModal(false)
@@ -34,20 +50,21 @@ const FooterPage = () => {
 
 
                 <div className="col flex justify-start ml-28">
+                    {getLanding.map((redes) => (
 
-                    <div className="w-16 h-16   ">
-                        <img className="rounded-t-lg wapp1" src={wapp1} alt="" />
-                    </div>
-                    <div className=" ml-3 w-16 h-16   ">
-                        <img className="rounded-t-lg wapp1" src={instagram} alt="" />
-                    </div>
+                        <div key = {redes.id} className="w-16 h-16   ">
+                            <a href={redes.url} target="_blanck" >
 
-                    <div className=" ml-3 w-16 h-16   ">
-                        <img className="rounded-t-lg wapp1" src={face} alt="" />
-                    </div>
-                    <div className=" ml-3 w-16 h-16 bg-white rounded-full  ">
-                        <img className="rounded-t-lg wapp1 twit " onClick={twitterevent} src={twiter} alt="" />
-                    </div>
+                                <img className="rounded-t-lg wapp1" src={redes.logo} alt="" />
+                            </a>
+                        </div>
+                    ))}
+
+
+
+
+
+
 
                 </div>
             </div>
