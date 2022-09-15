@@ -61,6 +61,7 @@ const EstudiosPage = () => {
                                 </div>
                             </div>
                         ))}
+                        <div className="mb-48"></div>
                     </div>
                 </div>
             </div>

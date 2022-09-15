@@ -15,10 +15,10 @@ const FooterPage = () => {
     return (
 
         <div className="footer bg-dark bg-gradient">
-            
+
 
             <ModalForm isOpen={isOpenm} closeModal={closeModalm} >
-                <ContactForm />
+                <ContactForm closeModalm={closeModalm} />
             </ModalForm>
             <div className="row">
                 <div className="w-1/5"></div>
@@ -28,7 +28,8 @@ const FooterPage = () => {
 
                     <button onClick={openModalm}
                         className=" lg:w-48 sm:w-40 mr-9 bg-gray-500 hover:bg-black text-gray-200 hover:text-white rounded-lg p-2 ml-5 mt-2 mb-2 lg:text-3xl  font-bold" >
-                        Contactame</button>
+                        Contactame
+                    </button>
                 </div>
 
 
