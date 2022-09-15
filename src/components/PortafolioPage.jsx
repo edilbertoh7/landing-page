@@ -60,7 +60,7 @@ const PortafolioPage = () => {
 
                                         <div className="" >
 
-                                            <div className={`mb-5 ml-20  grid grid-cols-${portafolio.Tecnologias.length}  `}>
+                                            <div className={`mb-5 ml-20  grid grid-cols-4`}>
                                             {portafolio.Tecnologias.map((tecno)=>(
 
                                                 
