@@ -26,13 +26,13 @@ const ExperienciaPage = () => {
     return (
         <>
             <div className=" row   p-2 mb-24">
-                <div className="lg:col lg:p-40 ">
+                <div className="lg:col lg:mt-2 ">
                     <div className=" lg:p-20  text-white font-bold text-3xl lg:grid grid-cols-2 gap-4">
                         {getLanding.map((explaboral) => (
                             <div key={explaboral.id} className=" bg-gray-500 flex shadow-2xl justify-center lg:ml-12 mt-5 p-4 rounded-3xl  ">
 
                                 {/*inicia tarjeta */}
-                                <div className=" lg:mt-20  rounded-lg  ">
+                                <div className=" lg:mt-2  rounded-lg  ">
                                     <div>
                                         <div className="mb-2 text-4xl text-center font-bold tracking-tight text-gray-900 dark:text-white">
                                             {explaboral.empresa}

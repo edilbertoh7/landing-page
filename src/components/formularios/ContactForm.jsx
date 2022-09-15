@@ -16,7 +16,7 @@ const ContactForm = ({ closeModalm }) => {
         e.preventDefault();
         //   alert(Nombre)
         if ([Nombre, Celular, Correo, Mensaje].includes("")) {
-            alert('entra')
+            //alert('entra')
             setError(true)
             return
         }
