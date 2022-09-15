@@ -14,10 +14,6 @@ import aws from "../assets/img/aws.png";
 const PerfilPage = () => {
     return (
         <>
-
-
-            {/************************************************************ */}
-
             <div className=" row   p-2 mb-24">
                 <div className="col p-6">
                     <div className=" p-2  text-white font-bold text-3xl">
@@ -76,7 +72,7 @@ const PerfilPage = () => {
                                     Bases de datos
                                 </p>
                                 <p className="mb-16 mt-10 font-normal text-4xl text-gray-900 dark:text-gray-400">
-                                Manejo bases de datos relacionales y no relacionales
+                                    Manejo bases de datos relacionales y no relacionales
                                 </p>
                                 <div className="row mb-5">
                                     <div className="col">
@@ -91,7 +87,7 @@ const PerfilPage = () => {
                                         <img className="rounded-t-lg img-logos" src={mariadb} title="css3" />
                                     </div>
 
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -117,20 +113,8 @@ const PerfilPage = () => {
                         </div>
                     </div>
 
-                    
                 </div>
 
-
-
-
-
-                
-
-
-
-
-
-                
                 {/***targeta derecha */}
                 <div className="col p-6">
                     <div className=" p-2  text-white font-bold text-3xl">
@@ -168,7 +152,7 @@ const PerfilPage = () => {
                                         <img className="rounded-t-lg " src={python} title="python" />
                                     </div>
 
-                                   
+
                                 </div>
                             </div>
                         </div>
@@ -181,26 +165,22 @@ const PerfilPage = () => {
                                     Infraestructura
                                 </p>
                                 <p className="mb-16 mt-10 font-normal text-4xl text-gray-900 dark:text-gray-400">
-                                creación y despliegue de proyectos de infraestructura como código CDK aws 
+                                    creación y despliegue de proyectos de infraestructura como código CDK aws
                                 </p>
                                 <div className="row mb-5">
                                     <div className="col">
 
                                         <img className="rounded-t-lg  " src={aws} title="php" />
                                     </div>
-                             
 
-                                   
                                 </div>
                             </div>
                         </div>
-
 
                     </div>
                 </div>
 
             </div>
-
         </>
     )
 }

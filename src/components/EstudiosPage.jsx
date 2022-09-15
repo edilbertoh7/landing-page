@@ -6,7 +6,7 @@ import landingApi from "../api/LandingApi";
 const EstudiosPage = () => {
 
     const [getLanding, setGetLandig] = useState([])
-    console.log(getLanding);
+    //console.log(getLanding);
 
     useEffect(() => {
         obtenerEstudios()
@@ -18,9 +18,6 @@ const EstudiosPage = () => {
             const respuesta = await landingApi.get('/landing');
             setGetLandig(respuesta.data[0].estudios)
             //console.log(respuesta.data[0].estudios);
-            getLanding.map((landing) => {
-                //console.log(landing.backend[0].lenguaje);
-            })
         } catch (error) {
             console.log(error);
         }
@@ -65,14 +62,6 @@ const EstudiosPage = () => {
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
-
-
         </>
     )
 }

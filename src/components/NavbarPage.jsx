@@ -45,10 +45,7 @@ const NavbarPage = () => {
                             ${isActive ? "bg-black text-white" : ""}`}
                             to="/portafolio">
                             Portafolio
-                        </NavLink>
-
-                       
-
+                        </NavLink>                       
                     </div>
                 </div>
             </div>

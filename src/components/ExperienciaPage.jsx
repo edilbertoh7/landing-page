@@ -5,7 +5,7 @@ import landingApi from "../api/LandingApi";
 const ExperienciaPage = () => {
 
     const [getLanding, setGetLandig] = useState([])
-    console.log(getLanding);
+    //console.log(getLanding);
 
     useEffect(() => {
         obtenerExperiencia()
@@ -17,9 +17,7 @@ const ExperienciaPage = () => {
             const respuesta = await landingApi.get('/landing');
             setGetLandig(respuesta.data[0].explaboral)
             //console.log(respuesta.data[0].explaboral);
-            getLanding.map((landing) => {
-                //console.log(landing.backend[0].lenguaje);
-            })
+          
         } catch (error) {
             console.log(error);
         }
@@ -28,7 +26,7 @@ const ExperienciaPage = () => {
     return (
         <>
             <div className=" row   p-2 mb-24">
-                <div className="lg:col lg:p-40 mt-20">
+                <div className="lg:col lg:p-40 ">
                     <div className=" lg:p-20  text-white font-bold text-3xl lg:grid grid-cols-2 gap-4">
                         {getLanding.map((explaboral) => (
                             <div key={explaboral.id} className=" bg-gray-500 flex shadow-2xl justify-center lg:ml-12 mt-5 p-4 rounded-3xl  ">
@@ -44,7 +42,6 @@ const ExperienciaPage = () => {
                                         </div>
                                         
                                     </div>
-
 
                                     <div className="grid grid-cols-3">
                                         <div></div>

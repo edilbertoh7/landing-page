@@ -18,7 +18,6 @@ function App() {
           <Route path="estudios" element={<EstudiosPage />} />
           <Route path="explaboral" element={<ExperienciaPage />} />
           <Route path="portafolio" element={<PortafolioPage />} />
-          <Route path="contacto" element={<ContactoPage />} />
           <Route path="/*" element={<PerfilPage />} />
         </Route>
       </Routes>

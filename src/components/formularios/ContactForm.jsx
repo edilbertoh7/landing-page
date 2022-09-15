@@ -3,7 +3,6 @@ import axios from "axios";
 
 const API_URL = "https://telloapp-b8a8f-default-rtdb.firebaseio.com";
 
-
 const ContactForm = ({ closeModalm }) => {
 
     const [Nombre, setNombre] = useState('');
@@ -12,7 +11,6 @@ const ContactForm = ({ closeModalm }) => {
     const [Mensaje, setMensaje] = useState('');
 
     const [error, setError] = useState(false);
-
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -39,7 +37,6 @@ const ContactForm = ({ closeModalm }) => {
             "fecha": now
         };
 
-
         axios.post(`${API_URL}/contact-form.json`, payload)
             .then(function (response) {
                 console.log(response.data);
@@ -50,8 +47,6 @@ const ContactForm = ({ closeModalm }) => {
             });
             
             closeModalm()
-
-
     }
     return (
         <>
@@ -72,7 +67,6 @@ const ContactForm = ({ closeModalm }) => {
                             </div>
                             <div className='text-red-500 font-bold' >{Celular == '' && error && ('por favor ingresa tu numero de contacto')}</div>
 
-
                             <div className="text-start">
                                 <label className='text-1xl'>CORREO</label>
                                 <input type="email" className="form-control text-1xl" name="correo" id="correo" placeholder="Correo" onChange={(e) => setCorreo(e.target.value)} />
@@ -80,12 +74,11 @@ const ContactForm = ({ closeModalm }) => {
                             <div className='text-red-500 font-bold' >{Correo == '' && error && ('Por favor dejame tu correo para contactarte')}</div>
 
                             <div className="text-start">
-                                <label className='text-1xl'> Mensaje</label>
+                                <label className='text-1xl'>Deja tu Mensaje</label>
                                 <textarea name="" id="" cols="20" rows="5"
                                     className='form-control text-1xl' onChange={(e) => setMensaje(e.target.value)}></textarea>
                             </div>
                             <div className='text-red-500 font-bold' >{Mensaje == '' && error && ('Aun no has escrito un mensaje')}</div>
-
 
                             <div className='mt-2' >
 
@@ -95,12 +88,7 @@ const ContactForm = ({ closeModalm }) => {
                         </form>
 
                     </div>
-
-                    {/*segundo card*/}
-
-
                 </div>
-
             </div>
         </>
     )

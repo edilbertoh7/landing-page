@@ -5,7 +5,7 @@ import landingApi from "../api/LandingApi";
 
 const PortafolioPage = () => {
     const [getLanding, setGetLandig] = useState([])
-    console.log(getLanding);
+    //console.log(getLanding);
 
     useEffect(() => {
         obtenerPortafolio()
@@ -17,9 +17,7 @@ const PortafolioPage = () => {
             const respuesta = await landingApi.get('/landing');
             setGetLandig(respuesta.data[0].portafolio)
             //console.log(respuesta.data[0].portafolio);
-            getLanding.map((landing) => {
-                //console.log(landing.backend[0].lenguaje);
-            })
+
         } catch (error) {
             console.log(error);
         }
@@ -41,20 +39,17 @@ const PortafolioPage = () => {
                                         </div>
                                     </div>
 
-
                                     <div className="">
                                         <div className=" w-20"> </div>
 
 
                                         <div className=" font-normal text-4xl text-gray-900 dark:text-gray-400">
                                             <img className={`${portafolio.clase} rotate-12`} src={portafolio.imagen} alt="" />
-                                            
+
                                         </div>
 
                                         <div className=" w-20"> </div>
                                     </div>
-
-
 
                                     <div className=" mt-5 mb-3 font-bold  text-gray-900 text-4xl text-center dark:text-gray-400">
                                         <div className="grid grid-cols-2">
@@ -89,14 +84,6 @@ const PortafolioPage = () => {
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
-
-
         </>
     )
 }

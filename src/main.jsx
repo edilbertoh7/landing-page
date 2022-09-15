@@ -13,7 +13,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <NavbarPage />
       <App />
       <FooterPage />
-    
     </BrowserRouter>
   </React.StrictMode>
 )

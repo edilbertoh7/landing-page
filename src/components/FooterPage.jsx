@@ -7,7 +7,7 @@ import landingApi from "../api/LandingApi";
 
 const FooterPage = () => {
     const [getLanding, setGetLandig] = useState([])
-    console.log(getLanding);
+    //console.log(getLanding);
 
     useEffect(() => {
         obtenerPortafolio()
@@ -19,9 +19,7 @@ const FooterPage = () => {
             const respuesta = await landingApi.get('/landing');
             setGetLandig(respuesta.data[0].redes)
             //console.log(respuesta.data[0].portafolio);
-            getLanding.map((landing) => {
-                //console.log(landing.backend[0].lenguaje);
-            })
+            
         } catch (error) {
             console.log(error);
         }
@@ -31,7 +29,6 @@ const FooterPage = () => {
     return (
 
         <div className="footer bg-dark bg-gradient">
-
 
             <ModalForm isOpen={isOpenm} closeModal={closeModalm} >
                 <ContactForm closeModalm={closeModalm} />
@@ -48,24 +45,16 @@ const FooterPage = () => {
                     </button>
                 </div>
 
-
                 <div className="col flex justify-start ml-28">
                     {getLanding.map((redes) => (
 
                         <div key = {redes.id} className="w-16 h-16   ">
                             <a href={redes.url} target="_blanck" >
 
-                                <img className="rounded-t-lg wapp1" src={redes.logo} alt="" />
+                                <img className="rounded-t-lg wapp1 twit" src={redes.logo} alt="" />
                             </a>
                         </div>
                     ))}
-
-
-
-
-
-
-
                 </div>
             </div>
         </div>

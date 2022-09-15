@@ -2,43 +2,43 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-.navbared{
+.navbared {
     position: fixed;
     width: 100%;
 }
-.footer{
+
+.footer {
     text-align: center;
     position: fixed;
     bottom: 0px;
     width: 100%;
-    
+
     /*background-color: #13678A;*/
-   /* background-color: black;*/
+    /* background-color: black;*/
     color: white;
     margin-bottom: 10px;
 }
 
 
 
-.wapp1{
+.wapp1 {
     width: 58px;
     height: 58px;
 }
-.wapp1.twit{
+
+.wapp1.twit {
     width: 43px;
     height: 43px;
     margin-top: 10px;
     margin-left: 11px;
 }
-.img-estudios{
-width: 200px;
-height: 200px;
+
+.img-estudios {
+    width: 200px;
+    height: 200px;
 }
-.git{
+
+.git {
     width: 50px;
     height: 50px;
 }
-
-
-
-
